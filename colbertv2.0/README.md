@@ -25,5 +25,5 @@ Train a [ColBERT](https://huggingface.co/colbert-ir/colbertv2.0) model to use as
 4. Test it out.
 
     ```bash
-    curl -s "http://0.0.0.0/items?pageNumber=1" | jq .
+    curl -s 'http://localhost:8081/api/search?query=What+icon+can+i+use+for+Quay&k=3' | jq .
     ```
