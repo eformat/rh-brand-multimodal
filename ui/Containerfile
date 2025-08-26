@@ -1,0 +1,15 @@
+FROM registry.access.redhat.com/ubi10/nodejs-22-minimal:latest as builder
+ADD src src
+ADD public public
+ADD jsconfig.json jsconfig.json
+ADD next.config.js next.config.js
+ADD package.json package.json
+ADD postcss.config.js postcss.config.js
+ADD tailwind.config.js tailwind.config.js
+RUN npm install
+RUN npm run build
+
+FROM builder
+COPY build/ .
+EXPOSE 3000
+ENTRYPOINT [ "next", "start" ]
