@@ -1,0 +1,15 @@
+---
+resources:
+  - namespace.yaml
+  - is-rh-brand-api.yaml
+  - is-rh-brand-model.yaml
+  - is-rh-brand-ui.yaml
+  - svc-rh-brand-api.yaml
+  - svc-rh-brand-model.yaml
+  - svc-rh-brand-ui.yaml
+  - deployment-rh-brand-api.yaml
+  - deployment-rh-brand-model.yaml
+  - deployment-rh-brand-ui.yaml
+  - route-rh-brand-api.yaml
+  - route-rh-brand-model.yaml
+  - route-rh-brand-ui.yaml

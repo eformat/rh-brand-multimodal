@@ -1,0 +1,26 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  labels:
+    app: rh-brand-api
+    app.kubernetes.io/component: rh-brand-api
+    app.kubernetes.io/instance: rh-brand-api
+  name: rh-brand-api
+  namespace: red-brand
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: quay.io/eformat/rh-brand-api:latest
+    importPolicy:
+      importMode: Legacy
+    name: latest
+    referencePolicy:
+      type: Source
+status: {}

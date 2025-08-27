@@ -1,0 +1,53 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"rh-brand-api:latest"},"fieldPath":"spec.template.spec.containers[?(@.name==\"rh-brand-api\")].image"}]'
+  labels:
+    app: rh-brand-api
+    app.kubernetes.io/component: rh-brand-api
+    app.kubernetes.io/instance: rh-brand-api
+  name: rh-brand-api
+  namespace: red-brand
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      deployment: rh-brand-api
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewApp
+      creationTimestamp: null
+      labels:
+        deployment: rh-brand-api
+    spec:
+      containers:
+      - env:
+        - name: MODEL_URL
+          value: rh-brand-model:8081
+        image: ' '
+        imagePullPolicy: Always
+        name: rh-brand-api
+        ports:
+        - containerPort: 5000
+          protocol: TCP
+        - containerPort: 8080
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status: {}

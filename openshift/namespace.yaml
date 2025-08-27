@@ -1,0 +1,11 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    kubernetes.io/metadata.name: red-brand
+  name: red-brand
+spec:
+  finalizers:
+  - kubernetes
+status: {}

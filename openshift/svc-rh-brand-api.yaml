@@ -1,0 +1,32 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  labels:
+    app: rh-brand-api
+    app.kubernetes.io/component: rh-brand-api
+    app.kubernetes.io/instance: rh-brand-api
+  name: rh-brand-api
+  namespace: red-brand
+spec:
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: 5000-tcp
+    port: 5000
+    protocol: TCP
+    targetPort: 5000
+  - name: 8080-tcp
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    deployment: rh-brand-api
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

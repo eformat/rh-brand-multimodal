@@ -1,0 +1,24 @@
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  labels:
+    app: rh-brand-api
+    app.kubernetes.io/component: rh-brand-api
+    app.kubernetes.io/instance: rh-brand-api
+  name: rh-brand-api
+  namespace: red-brand
+spec:
+  port:
+    targetPort: 5000
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: rh-brand-api
+    weight: 100
+  wildcardPolicy: None
+status: {}
