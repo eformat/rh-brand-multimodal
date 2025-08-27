@@ -5,8 +5,8 @@ import os
 from dotenv import load_dotenv
 from rich import print
 
-INDEX_NAME = os.getenv("INDEX_NAME")
-INDEX_ROOT = os.getenv("INDEX_ROOT")
+INDEX_NAME = os.getenv("INDEX_NAME", "brand")
+INDEX_ROOT = os.getenv("INDEX_ROOT", "/home/mike/git/rh-brand-multimodal/colbertv2.0/.ragatouille/colbert/indexes")
 
 print("Importing RAGPretrainedModel from ragatouille (this might take a while)...")
 from ragatouille import RAGPretrainedModel
