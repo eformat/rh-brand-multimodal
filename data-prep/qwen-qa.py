@@ -19,7 +19,7 @@ lm = dspy.LM(model=LLM_MODEL,
 dspy.configure(lm=lm)
 dspy.settings.configure(track_usage=True)
 
-print("--- Day 2: Chain of Thought ---")
+print("--- Chain of Thought ---")
 
 class ImageClassificationSignature(dspy.Signature):
     """Classify the object in the image."""
