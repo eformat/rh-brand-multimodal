@@ -6,7 +6,7 @@ import json
 documents = []
 document_metadatas = []
 
-with open("../brand.jsonl", "r") as f:
+with open("../data-prep/brand.jsonl", "r") as f:
     for line in f:
         data = json.loads(line)
         document_metadatas.append([
