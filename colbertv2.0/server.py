@@ -43,5 +43,5 @@ def api_search():
         return ('', 405)
 
 if __name__ == "__main__":
-    app.run("0.0.0.0", int(os.getenv("PORT")))
+    app.run("0.0.0.0", int(os.getenv("PORT", 8081)))
 
