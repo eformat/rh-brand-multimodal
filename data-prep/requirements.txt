@@ -9,14 +9,13 @@ apsw==3.46.1.0
 argcomplete==3.6.2
 asyncer==0.0.8
 attrs==24.2.0
-awscli==1.37.15
 backoff==2.2.1
 Beaker==1.12.1
 beautifulsoup4==4.13.5
 blivet==3.11.0
 blivet-gui==2.6.0
-boto3==1.36.15
-botocore==1.36.15
+boto3==1.40.19
+botocore==1.40.19
 bottle==0.12.25
 Brlapi==0.8.5
 cachetools==6.2.0
@@ -26,7 +25,6 @@ chardet==5.2.0
 charset-normalizer==3.3.2
 click==8.1.7
 cloudpickle==3.1.1
-colorama==0.4.6
 colorlog==6.9.0
 configobj==5.0.8
 crypt_r==3.13.1
@@ -34,17 +32,14 @@ cryptography==43.0.0
 css-parser==1.0.10
 cupshelpers==1.0
 dasbus==1.7
-datasets==4.0.0
 dbus-python==1.3.2
 defusedxml==0.7.1
 Deprecated==1.2.15
-dill==0.3.8
 diskcache==5.6.3
 distro==1.9.0
 dnf==4.23.0
 dnspython==2.6.1
-docutils==0.16
-dspy==3.0.2
+dspy==3.0.3
 durationpy==0.9
 fastuuid==0.12.0
 fedora-third-party==0.10
@@ -53,8 +48,8 @@ file-magic==0.4.0
 filelock==3.19.1
 fros==1.1
 frozenlist==1.7.0
-fsspec==2025.3.0
-gepa==0.0.4
+fsspec==2025.9.0
+gepa==0.0.7
 google-auth==2.40.3
 google-re2==1.1.20250812
 greenlet==3.2.4
@@ -77,7 +72,7 @@ Jinja2==3.1.6
 jiter==0.10.0
 jmespath==1.0.1
 joblib==1.5.2
-json_repair==0.50.0
+json_repair==0.50.1
 jsonschema==4.25.1
 jsonschema-specifications==2023.11.2
 kcli==99.0
@@ -89,7 +84,7 @@ libdnf==0.74.0
 libdnf5==5.2.16.0
 libevdev==0.11
 libvirt-python==10.6.0
-litellm==1.76.1
+litellm==1.77.0
 louis==3.33.0
 lxml==5.3.2
 lxml_html_clean==0.4.2
@@ -103,17 +98,16 @@ mechanize==0.4.10
 mercurial==6.8.2
 msgpack==1.0.6
 multidict==6.6.4
-multiprocess==0.70.16
 netifaces==0.11.0
 nftables==0.1
-numpy==2.3.2
+numpy==2.3.3
 oauthlib==3.2.2
 odfpy==1.4.1
 olefile==0.47
-openai==1.102.0
+openai==1.107.1
 optuna==4.5.0
+orjson==3.11.3
 packaging==24.2
-pandas==2.3.2
 Paste==3.10.1
 pdfarranger==1.12.0
 pefile==2023.2.7
@@ -130,7 +124,6 @@ propcache==0.3.2
 psutil==5.9.8
 ptyprocess==0.7.0
 pwquality==1.4.5
-pyarrow==21.0.0
 pyasn1==0.6.0
 pyasn1_modules==0.4.0
 pycairo==1.25.1
@@ -158,7 +151,6 @@ python-dotenv==1.0.1
 python-linux-procfs==0.7.3
 python-meh==0.52
 python-pam==2.0.2
-pytz==2025.2
 pyudev==0.24.3
 pyxdg==0.27
 PyYAML==6.0.1
@@ -174,8 +166,8 @@ resolvelib==1.0.1
 rich==14.1.0
 rpds-py==0.19.1
 rpm==4.20.1
-rsa==4.7.2
-s3transfer==0.11.3
+rsa==4.9
+s3transfer==0.13.1
 selinux @ file:///builddir/build/BUILD/libselinux-3.7-build/libselinux-3.7/src
 sepolicy @ file:///builddir/build/BUILD/policycoreutils-3.7-build/selinux-3.7/python/sepolicy
 setools==4.5.1
@@ -197,8 +189,6 @@ tokenizers==0.22.0
 tqdm==4.67.1
 typing-inspection==0.4.1
 typing_extensions==4.12.2
-tzdata==2025.2
-ujson==5.11.0
 urllib3==1.26.20
 virt-firmware==25.7.3
 wcwidth==0.2.13
