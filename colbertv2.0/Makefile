@@ -6,7 +6,7 @@ IMG := $(REPOSITORY):latest
 
 # Build the podman image
 podman-build:
-	podman build --platform linux/amd64 . -t ${IMG} -f Containerfile
+	podman build --no-cache --platform linux/amd64 . -t ${IMG} -f Containerfile
 
 # Push the podman image
 podman-push: podman-build

@@ -21,5 +21,5 @@
 4. Use [DSPy](https://dspy.ai/) to generate jsonl file.
 
     ```bash
-    python qwen-qa3.py
+    python qwen-qa4.py
     ```

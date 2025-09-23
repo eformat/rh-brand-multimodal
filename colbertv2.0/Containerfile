@@ -3,7 +3,7 @@
 # 🍔 this is an older image with 3.9, cuda - not effort has been made to put this on a diet 🍔
 FROM quay.io/eformat/cuda-notebooks:3.9 as builder
 ADD requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+RUN pip install --no-cache -r requirements.txt
 ADD brand.tar.gz .
 USER root
 RUN mkdir /opt/app-root/src/.cache/huggingface && \
@@ -14,7 +14,7 @@ USER 1001
 
 FROM builder
 ENV TORCH_CUDA_ARCH_LIST=8.9
-ENV INDEX_NAME=dev-red-rag
+ENV INDEX_NAME=brand
 ENV INDEX_ROOT=/opt/app-root/src
 ENV PORT=8081
 EXPOSE 8081
