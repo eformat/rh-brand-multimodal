@@ -17,6 +17,7 @@ lm = dspy.LM(model=LLM_MODEL,
              api_base=LLM_URL,
              api_key=API_KEY,
              temperature=TEMPERATURE,
+             max_tokens=MAX_TOKENS,
              model_type='chat',
              cache=False,
              stream=False)
